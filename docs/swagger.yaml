@@ -1,6 +1,5 @@
-basePath: /api/v1
 definitions:
-  dto.AddMaterialRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.AddMaterialRequest:
     properties:
       material_id:
         type: integer
@@ -10,21 +9,21 @@ definitions:
     - material_id
     - quantity
     type: object
-  dto.AddNoteRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.AddNoteRequest:
     properties:
       text:
         type: string
     required:
     - text
     type: object
-  dto.AssignTechnicianRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.AssignTechnicianRequest:
     properties:
       technician_id:
         type: integer
     required:
     - technician_id
     type: object
-  dto.ChangePasswordRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangePasswordRequest:
     properties:
       current_password:
         type: string
@@ -35,14 +34,14 @@ definitions:
     - current_password
     - new_password
     type: object
-  dto.ChangeStatusRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangeStatusRequest:
     properties:
       status:
         type: string
     required:
     - status
     type: object
-  dto.CreateBrandRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateBrandRequest:
     properties:
       equipment_type_id:
         type: integer
@@ -52,7 +51,7 @@ definitions:
     - equipment_type_id
     - name
     type: object
-  dto.CreateClientRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateClientRequest:
     properties:
       address:
         type: string
@@ -74,7 +73,7 @@ definitions:
     - primary_contact
     - tax_id
     type: object
-  dto.CreateEquipmentModelRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentModelRequest:
     properties:
       brand_id:
         type: integer
@@ -87,7 +86,7 @@ definitions:
     - equipment_type_id
     - name
     type: object
-  dto.CreateEquipmentRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentRequest:
     properties:
       client_id:
         type: integer
@@ -106,14 +105,14 @@ definitions:
     - serial_number
     - status
     type: object
-  dto.CreateEquipmentTypeRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentTypeRequest:
     properties:
       name:
         type: string
     required:
     - name
     type: object
-  dto.CreateMaterialRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateMaterialRequest:
     properties:
       code:
         type: string
@@ -126,7 +125,7 @@ definitions:
     - description
     - unit_cost
     type: object
-  dto.CreateUserRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateUserRequest:
     properties:
       email:
         type: string
@@ -143,7 +142,7 @@ definitions:
     - password
     - role
     type: object
-  dto.CreateWorkOrderRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateWorkOrderRequest:
     properties:
       client_id:
         type: integer
@@ -162,7 +161,7 @@ definitions:
     - priority
     - scheduled_date
     type: object
-  dto.LoginRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.LoginRequest:
     properties:
       email:
         type: string
@@ -173,14 +172,14 @@ definitions:
     - email
     - password
     type: object
-  dto.RefreshRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.RefreshRequest:
     properties:
       refresh_token:
         type: string
     required:
     - refresh_token
     type: object
-  dto.UpdateBrandRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateBrandRequest:
     properties:
       equipment_type_id:
         type: integer
@@ -190,7 +189,7 @@ definitions:
     - equipment_type_id
     - name
     type: object
-  dto.UpdateClientRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateClientRequest:
     properties:
       address:
         type: string
@@ -212,7 +211,7 @@ definitions:
     - primary_contact
     - tax_id
     type: object
-  dto.UpdateEquipmentModelRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentModelRequest:
     properties:
       brand_id:
         type: integer
@@ -225,7 +224,7 @@ definitions:
     - equipment_type_id
     - name
     type: object
-  dto.UpdateEquipmentRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentRequest:
     properties:
       client_id:
         type: integer
@@ -244,14 +243,14 @@ definitions:
     - serial_number
     - status
     type: object
-  dto.UpdateEquipmentTypeRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentTypeRequest:
     properties:
       name:
         type: string
     required:
     - name
     type: object
-  dto.UpdateMaterialRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateMaterialRequest:
     properties:
       code:
         type: string
@@ -264,7 +263,7 @@ definitions:
     - description
     - unit_cost
     type: object
-  dto.UpdateUserRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateUserRequest:
     properties:
       active:
         type: boolean
@@ -279,7 +278,7 @@ definitions:
     - name
     - role
     type: object
-  dto.UpdateWorkOrderRequest:
+  github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateWorkOrderRequest:
     properties:
       client_id:
         type: integer
@@ -298,7 +297,7 @@ definitions:
     - priority
     - scheduled_date
     type: object
-  response.APIResponse:
+  github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse:
     properties:
       data: {}
       errors:
@@ -308,11 +307,11 @@ definitions:
       message:
         type: string
       pagination:
-        $ref: '#/definitions/response.Pagination'
+        $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.Pagination'
       success:
         type: boolean
     type: object
-  response.Pagination:
+  github_com_pablomillaquen_speckit_golang_api_pkg_response.Pagination:
     properties:
       page:
         type: integer
@@ -369,11 +368,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List audit logs
       tags:
       - Audit
@@ -388,22 +387,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.ChangePasswordRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangePasswordRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "401":
           description: Unauthorized
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Change password
       tags:
       - Authentication
@@ -419,22 +418,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.LoginRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.LoginRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "401":
           description: Unauthorized
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: User login
       tags:
       - Authentication
@@ -449,22 +448,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.RefreshRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.RefreshRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "401":
           description: Unauthorized
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Refresh access token
       tags:
       - Authentication
@@ -479,22 +478,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateBrandRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateBrandRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create brand
       tags:
       - Catalog
@@ -513,15 +512,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete brand
       tags:
       - Catalog
@@ -539,15 +538,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get brand by ID
       tags:
       - Catalog
@@ -566,22 +565,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateBrandRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateBrandRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update brand
       tags:
       - Catalog
@@ -600,15 +599,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List brands by type
       tags:
       - Catalog
@@ -623,22 +622,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateEquipmentModelRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentModelRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create equipment model
       tags:
       - Catalog
@@ -657,15 +656,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete equipment model
       tags:
       - Catalog
@@ -683,15 +682,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get equipment model
       tags:
       - Catalog
@@ -710,22 +709,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateEquipmentModelRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentModelRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update equipment model
       tags:
       - Catalog
@@ -744,15 +743,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List models by brand
       tags:
       - Catalog
@@ -765,11 +764,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List equipment types
       tags:
       - Catalog
@@ -783,22 +782,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateEquipmentTypeRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentTypeRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create equipment type
       tags:
       - Catalog
@@ -817,15 +816,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete equipment type
       tags:
       - Catalog
@@ -843,15 +842,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get equipment type
       tags:
       - Catalog
@@ -870,22 +869,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateEquipmentTypeRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentTypeRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update equipment type
       tags:
       - Catalog
@@ -911,11 +910,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List clients
       tags:
       - Clients
@@ -929,22 +928,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateClientRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateClientRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create client
       tags:
       - Clients
@@ -963,15 +962,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete client
       tags:
       - Clients
@@ -989,15 +988,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get client by ID
       tags:
       - Clients
@@ -1016,22 +1015,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateClientRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateClientRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update client
       tags:
       - Clients
@@ -1061,11 +1060,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List equipment
       tags:
       - Equipment
@@ -1079,22 +1078,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateEquipmentRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create equipment
       tags:
       - Equipment
@@ -1113,15 +1112,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete equipment
       tags:
       - Equipment
@@ -1139,15 +1138,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get equipment by ID
       tags:
       - Equipment
@@ -1166,22 +1165,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateEquipmentRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update equipment
       tags:
       - Equipment
@@ -1194,11 +1193,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "503":
           description: Service Unavailable
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Health check
       tags:
       - Health
@@ -1220,11 +1219,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List materials
       tags:
       - Materials
@@ -1238,22 +1237,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateMaterialRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateMaterialRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create material
       tags:
       - Materials
@@ -1272,15 +1271,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete material
       tags:
       - Materials
@@ -1298,15 +1297,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get material by ID
       tags:
       - Materials
@@ -1325,22 +1324,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateMaterialRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateMaterialRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update material
       tags:
       - Materials
@@ -1362,11 +1361,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List users
       tags:
       - Users
@@ -1380,22 +1379,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateUserRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateUserRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create user
       tags:
       - Users
@@ -1414,15 +1413,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete user
       tags:
       - Users
@@ -1440,15 +1439,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get user by ID
       tags:
       - Users
@@ -1467,22 +1466,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateUserRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateUserRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "409":
           description: Conflict
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update user
       tags:
       - Users
@@ -1528,11 +1527,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: List work orders
       tags:
       - Work Orders
@@ -1546,18 +1545,18 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.CreateWorkOrderRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateWorkOrderRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Create work order
       tags:
       - Work Orders
@@ -1576,15 +1575,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Delete work order
       tags:
       - Work Orders
@@ -1602,15 +1601,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Get work order by ID
       tags:
       - Work Orders
@@ -1629,18 +1628,18 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.UpdateWorkOrderRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateWorkOrderRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Update work order
       tags:
       - Work Orders
@@ -1660,18 +1659,18 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.AssignTechnicianRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.AssignTechnicianRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Assign technician
       tags:
       - Work Orders
@@ -1691,22 +1690,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.AddMaterialRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.AddMaterialRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Add material to work order
       tags:
       - Work Orders
@@ -1726,22 +1725,22 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.AddNoteRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.AddNoteRequest'
       produces:
       - application/json
       responses:
         "201":
           description: Created
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Add note to work order
       tags:
       - Work Orders
@@ -1761,18 +1760,18 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/dto.ChangeStatusRequest'
+          $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangeStatusRequest'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/response.APIResponse'
+            $ref: '#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse'
       summary: Change work order status
       tags:
       - Work Orders

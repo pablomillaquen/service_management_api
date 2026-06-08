@@ -5,6 +5,7 @@
 *.so
 *.dylib
 server
+/api
 
 # Go
 *.test

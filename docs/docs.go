@@ -75,13 +75,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -107,7 +107,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.ChangePasswordRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangePasswordRequest"
                         }
                     }
                 ],
@@ -115,19 +115,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -153,7 +153,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.LoginRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.LoginRequest"
                         }
                     }
                 ],
@@ -161,19 +161,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -199,7 +199,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.RefreshRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.RefreshRequest"
                         }
                     }
                 ],
@@ -207,19 +207,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -245,7 +245,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateBrandRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateBrandRequest"
                         }
                     }
                 ],
@@ -253,19 +253,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -294,19 +294,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -335,19 +335,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -378,7 +378,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateBrandRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateBrandRequest"
                         }
                     }
                 ],
@@ -386,19 +386,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -425,19 +425,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -463,7 +463,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateEquipmentModelRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentModelRequest"
                         }
                     }
                 ],
@@ -471,19 +471,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -512,19 +512,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -553,19 +553,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -596,7 +596,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateEquipmentModelRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentModelRequest"
                         }
                     }
                 ],
@@ -604,19 +604,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -643,19 +643,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -675,13 +675,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -705,7 +705,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateEquipmentTypeRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentTypeRequest"
                         }
                     }
                 ],
@@ -713,19 +713,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -754,19 +754,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -797,7 +797,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateEquipmentTypeRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentTypeRequest"
                         }
                     }
                 ],
@@ -805,19 +805,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -844,19 +844,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -896,13 +896,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -926,7 +926,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateClientRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateClientRequest"
                         }
                     }
                 ],
@@ -934,19 +934,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -975,19 +975,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1018,7 +1018,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateClientRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateClientRequest"
                         }
                     }
                 ],
@@ -1026,19 +1026,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1065,19 +1065,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1123,13 +1123,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1153,7 +1153,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateEquipmentRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentRequest"
                         }
                     }
                 ],
@@ -1161,19 +1161,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1202,19 +1202,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1245,7 +1245,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateEquipmentRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentRequest"
                         }
                     }
                 ],
@@ -1253,19 +1253,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1292,19 +1292,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1324,13 +1324,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "503": {
                         "description": "Service Unavailable",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1364,13 +1364,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1394,7 +1394,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateMaterialRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateMaterialRequest"
                         }
                     }
                 ],
@@ -1402,19 +1402,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1443,19 +1443,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1486,7 +1486,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateMaterialRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateMaterialRequest"
                         }
                     }
                 ],
@@ -1494,19 +1494,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1533,19 +1533,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1579,13 +1579,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1609,7 +1609,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateUserRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateUserRequest"
                         }
                     }
                 ],
@@ -1617,19 +1617,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1658,19 +1658,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1701,7 +1701,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateUserRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateUserRequest"
                         }
                     }
                 ],
@@ -1709,19 +1709,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "409": {
                         "description": "Conflict",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1748,19 +1748,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1830,13 +1830,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1860,7 +1860,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateWorkOrderRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateWorkOrderRequest"
                         }
                     }
                 ],
@@ -1868,13 +1868,13 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1903,19 +1903,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1946,7 +1946,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UpdateWorkOrderRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateWorkOrderRequest"
                         }
                     }
                 ],
@@ -1954,13 +1954,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -1987,19 +1987,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -2032,7 +2032,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.AssignTechnicianRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.AssignTechnicianRequest"
                         }
                     }
                 ],
@@ -2040,13 +2040,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -2079,7 +2079,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.AddMaterialRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.AddMaterialRequest"
                         }
                     }
                 ],
@@ -2087,19 +2087,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -2132,7 +2132,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.AddNoteRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.AddNoteRequest"
                         }
                     }
                 ],
@@ -2140,19 +2140,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -2185,7 +2185,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.ChangeStatusRequest"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangeStatusRequest"
                         }
                     }
                 ],
@@ -2193,13 +2193,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/response.APIResponse"
+                            "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse"
                         }
                     }
                 }
@@ -2207,7 +2207,7 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "dto.AddMaterialRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.AddMaterialRequest": {
             "type": "object",
             "required": [
                 "material_id",
@@ -2222,7 +2222,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.AddNoteRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.AddNoteRequest": {
             "type": "object",
             "required": [
                 "text"
@@ -2233,7 +2233,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.AssignTechnicianRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.AssignTechnicianRequest": {
             "type": "object",
             "required": [
                 "technician_id"
@@ -2244,7 +2244,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.ChangePasswordRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangePasswordRequest": {
             "type": "object",
             "required": [
                 "current_password",
@@ -2260,7 +2260,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.ChangeStatusRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.ChangeStatusRequest": {
             "type": "object",
             "required": [
                 "status"
@@ -2271,7 +2271,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateBrandRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateBrandRequest": {
             "type": "object",
             "required": [
                 "equipment_type_id",
@@ -2286,7 +2286,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateClientRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateClientRequest": {
             "type": "object",
             "required": [
                 "address",
@@ -2317,7 +2317,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateEquipmentModelRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentModelRequest": {
             "type": "object",
             "required": [
                 "brand_id",
@@ -2336,7 +2336,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateEquipmentRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentRequest": {
             "type": "object",
             "required": [
                 "client_id",
@@ -2363,7 +2363,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateEquipmentTypeRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateEquipmentTypeRequest": {
             "type": "object",
             "required": [
                 "name"
@@ -2374,7 +2374,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateMaterialRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateMaterialRequest": {
             "type": "object",
             "required": [
                 "code",
@@ -2393,7 +2393,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateUserRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateUserRequest": {
             "type": "object",
             "required": [
                 "email",
@@ -2417,7 +2417,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateWorkOrderRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.CreateWorkOrderRequest": {
             "type": "object",
             "required": [
                 "client_id",
@@ -2444,7 +2444,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.LoginRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.LoginRequest": {
             "type": "object",
             "required": [
                 "email",
@@ -2460,7 +2460,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.RefreshRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.RefreshRequest": {
             "type": "object",
             "required": [
                 "refresh_token"
@@ -2471,7 +2471,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateBrandRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateBrandRequest": {
             "type": "object",
             "required": [
                 "equipment_type_id",
@@ -2486,7 +2486,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateClientRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateClientRequest": {
             "type": "object",
             "required": [
                 "address",
@@ -2517,7 +2517,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateEquipmentModelRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentModelRequest": {
             "type": "object",
             "required": [
                 "brand_id",
@@ -2536,7 +2536,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateEquipmentRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentRequest": {
             "type": "object",
             "required": [
                 "client_id",
@@ -2563,7 +2563,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateEquipmentTypeRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateEquipmentTypeRequest": {
             "type": "object",
             "required": [
                 "name"
@@ -2574,7 +2574,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateMaterialRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateMaterialRequest": {
             "type": "object",
             "required": [
                 "code",
@@ -2593,7 +2593,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateUserRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateUserRequest": {
             "type": "object",
             "required": [
                 "email",
@@ -2615,7 +2615,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UpdateWorkOrderRequest": {
+        "github_com_pablomillaquen_speckit_golang_api_internal_dto.UpdateWorkOrderRequest": {
             "type": "object",
             "required": [
                 "client_id",
@@ -2642,7 +2642,7 @@ const docTemplate = `{
                 }
             }
         },
-        "response.APIResponse": {
+        "github_com_pablomillaquen_speckit_golang_api_pkg_response.APIResponse": {
             "type": "object",
             "properties": {
                 "data": {},
@@ -2656,14 +2656,14 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "pagination": {
-                    "$ref": "#/definitions/response.Pagination"
+                    "$ref": "#/definitions/github_com_pablomillaquen_speckit_golang_api_pkg_response.Pagination"
                 },
                 "success": {
                     "type": "boolean"
                 }
             }
         },
-        "response.Pagination": {
+        "github_com_pablomillaquen_speckit_golang_api_pkg_response.Pagination": {
             "type": "object",
             "properties": {
                 "page": {
@@ -2691,7 +2691,7 @@ const docTemplate = `{
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0.0",
 	Host:             "localhost:8080",
-	BasePath:         "/api/v1",
+	BasePath:         "",
 	Schemes:          []string{},
 	Title:            "Service Management API",
 	Description:      "API for managing technical services, clients, equipment, work orders, and materials.",
