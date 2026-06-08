@@ -1,0 +1,1784 @@
+basePath: /api/v1
+definitions:
+  dto.AddMaterialRequest:
+    properties:
+      material_id:
+        type: integer
+      quantity:
+        type: number
+    required:
+    - material_id
+    - quantity
+    type: object
+  dto.AddNoteRequest:
+    properties:
+      text:
+        type: string
+    required:
+    - text
+    type: object
+  dto.AssignTechnicianRequest:
+    properties:
+      technician_id:
+        type: integer
+    required:
+    - technician_id
+    type: object
+  dto.ChangePasswordRequest:
+    properties:
+      current_password:
+        type: string
+      new_password:
+        minLength: 8
+        type: string
+    required:
+    - current_password
+    - new_password
+    type: object
+  dto.ChangeStatusRequest:
+    properties:
+      status:
+        type: string
+    required:
+    - status
+    type: object
+  dto.CreateBrandRequest:
+    properties:
+      equipment_type_id:
+        type: integer
+      name:
+        type: string
+    required:
+    - equipment_type_id
+    - name
+    type: object
+  dto.CreateClientRequest:
+    properties:
+      address:
+        type: string
+      business_name:
+        type: string
+      email:
+        type: string
+      phone:
+        type: string
+      primary_contact:
+        type: string
+      tax_id:
+        type: string
+    required:
+    - address
+    - business_name
+    - email
+    - phone
+    - primary_contact
+    - tax_id
+    type: object
+  dto.CreateEquipmentModelRequest:
+    properties:
+      brand_id:
+        type: integer
+      equipment_type_id:
+        type: integer
+      name:
+        type: string
+    required:
+    - brand_id
+    - equipment_type_id
+    - name
+    type: object
+  dto.CreateEquipmentRequest:
+    properties:
+      client_id:
+        type: integer
+      location:
+        type: string
+      model_id:
+        type: integer
+      serial_number:
+        type: string
+      status:
+        type: string
+    required:
+    - client_id
+    - location
+    - model_id
+    - serial_number
+    - status
+    type: object
+  dto.CreateEquipmentTypeRequest:
+    properties:
+      name:
+        type: string
+    required:
+    - name
+    type: object
+  dto.CreateMaterialRequest:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+      unit_cost:
+        type: number
+    required:
+    - code
+    - description
+    - unit_cost
+    type: object
+  dto.CreateUserRequest:
+    properties:
+      email:
+        type: string
+      name:
+        type: string
+      password:
+        minLength: 8
+        type: string
+      role:
+        type: string
+    required:
+    - email
+    - name
+    - password
+    - role
+    type: object
+  dto.CreateWorkOrderRequest:
+    properties:
+      client_id:
+        type: integer
+      description:
+        type: string
+      equipment_id:
+        type: integer
+      priority:
+        type: string
+      scheduled_date:
+        type: string
+    required:
+    - client_id
+    - description
+    - equipment_id
+    - priority
+    - scheduled_date
+    type: object
+  dto.LoginRequest:
+    properties:
+      email:
+        type: string
+      password:
+        minLength: 8
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  dto.RefreshRequest:
+    properties:
+      refresh_token:
+        type: string
+    required:
+    - refresh_token
+    type: object
+  dto.UpdateBrandRequest:
+    properties:
+      equipment_type_id:
+        type: integer
+      name:
+        type: string
+    required:
+    - equipment_type_id
+    - name
+    type: object
+  dto.UpdateClientRequest:
+    properties:
+      address:
+        type: string
+      business_name:
+        type: string
+      email:
+        type: string
+      phone:
+        type: string
+      primary_contact:
+        type: string
+      tax_id:
+        type: string
+    required:
+    - address
+    - business_name
+    - email
+    - phone
+    - primary_contact
+    - tax_id
+    type: object
+  dto.UpdateEquipmentModelRequest:
+    properties:
+      brand_id:
+        type: integer
+      equipment_type_id:
+        type: integer
+      name:
+        type: string
+    required:
+    - brand_id
+    - equipment_type_id
+    - name
+    type: object
+  dto.UpdateEquipmentRequest:
+    properties:
+      client_id:
+        type: integer
+      location:
+        type: string
+      model_id:
+        type: integer
+      serial_number:
+        type: string
+      status:
+        type: string
+    required:
+    - client_id
+    - location
+    - model_id
+    - serial_number
+    - status
+    type: object
+  dto.UpdateEquipmentTypeRequest:
+    properties:
+      name:
+        type: string
+    required:
+    - name
+    type: object
+  dto.UpdateMaterialRequest:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+      unit_cost:
+        type: number
+    required:
+    - code
+    - description
+    - unit_cost
+    type: object
+  dto.UpdateUserRequest:
+    properties:
+      active:
+        type: boolean
+      email:
+        type: string
+      name:
+        type: string
+      role:
+        type: string
+    required:
+    - email
+    - name
+    - role
+    type: object
+  dto.UpdateWorkOrderRequest:
+    properties:
+      client_id:
+        type: integer
+      description:
+        type: string
+      equipment_id:
+        type: integer
+      priority:
+        type: string
+      scheduled_date:
+        type: string
+    required:
+    - client_id
+    - description
+    - equipment_id
+    - priority
+    - scheduled_date
+    type: object
+  response.APIResponse:
+    properties:
+      data: {}
+      errors:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      pagination:
+        $ref: '#/definitions/response.Pagination'
+      success:
+        type: boolean
+    type: object
+  response.Pagination:
+    properties:
+      page:
+        type: integer
+      per_page:
+        type: integer
+      total:
+        type: integer
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: support@speckit.com
+    name: API Support
+  description: API for managing technical services, clients, equipment, work orders,
+    and materials.
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://swagger.io/terms/
+  title: Service Management API
+  version: 1.0.0
+paths:
+  /api/v1/audit:
+    get:
+      description: Retrieve a paginated list of audit logs with optional filters
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: per_page
+        type: integer
+      - description: Filter by entity name
+        in: query
+        name: entity
+        type: string
+      - description: Filter by entity ID
+        in: query
+        name: entity_id
+        type: integer
+      - description: Filter by user ID
+        in: query
+        name: user_id
+        type: integer
+      - description: Filter by action
+        in: query
+        name: action
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List audit logs
+      tags:
+      - Audit
+  /api/v1/auth/change-password:
+    post:
+      consumes:
+      - application/json
+      description: Change the current user's password (requires authentication)
+      parameters:
+      - description: Current and new password
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ChangePasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Change password
+      tags:
+      - Authentication
+  /api/v1/auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Authenticate a user with email and password, returns access and
+        refresh tokens
+      parameters:
+      - description: Login credentials
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: User login
+      tags:
+      - Authentication
+  /api/v1/auth/refresh:
+    post:
+      consumes:
+      - application/json
+      description: Refresh the access token using a valid refresh token
+      parameters:
+      - description: Refresh token
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.RefreshRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Refresh access token
+      tags:
+      - Authentication
+  /api/v1/catalog/brands:
+    post:
+      consumes:
+      - application/json
+      description: Create a new brand in the catalog
+      parameters:
+      - description: Brand data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateBrandRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create brand
+      tags:
+      - Catalog
+  /api/v1/catalog/brands/{id}:
+    delete:
+      description: Delete a brand by ID
+      parameters:
+      - description: Brand ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete brand
+      tags:
+      - Catalog
+    get:
+      description: Retrieve a single brand by ID
+      parameters:
+      - description: Brand ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get brand by ID
+      tags:
+      - Catalog
+    put:
+      consumes:
+      - application/json
+      description: Update an existing brand
+      parameters:
+      - description: Brand ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated brand data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateBrandRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update brand
+      tags:
+      - Catalog
+  /api/v1/catalog/brands/by-type/{typeId}:
+    get:
+      description: Retrieve all brands for a given equipment type
+      parameters:
+      - description: Equipment type ID
+        in: path
+        name: typeId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List brands by type
+      tags:
+      - Catalog
+  /api/v1/catalog/models:
+    post:
+      consumes:
+      - application/json
+      description: Create a new equipment model in the catalog
+      parameters:
+      - description: Equipment model data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateEquipmentModelRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create equipment model
+      tags:
+      - Catalog
+  /api/v1/catalog/models/{id}:
+    delete:
+      description: Delete an equipment model by ID
+      parameters:
+      - description: Equipment model ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete equipment model
+      tags:
+      - Catalog
+    get:
+      description: Retrieve a single equipment model by ID
+      parameters:
+      - description: Equipment model ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get equipment model
+      tags:
+      - Catalog
+    put:
+      consumes:
+      - application/json
+      description: Update an existing equipment model
+      parameters:
+      - description: Equipment model ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated equipment model data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateEquipmentModelRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update equipment model
+      tags:
+      - Catalog
+  /api/v1/catalog/models/by-brand/{brandId}:
+    get:
+      description: Retrieve all equipment models for a given brand
+      parameters:
+      - description: Brand ID
+        in: path
+        name: brandId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List models by brand
+      tags:
+      - Catalog
+  /api/v1/catalog/types:
+    get:
+      description: Retrieve all equipment types
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List equipment types
+      tags:
+      - Catalog
+    post:
+      consumes:
+      - application/json
+      description: Create a new equipment type in the catalog
+      parameters:
+      - description: Equipment type data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateEquipmentTypeRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create equipment type
+      tags:
+      - Catalog
+  /api/v1/catalog/types/{id}:
+    delete:
+      description: Delete an equipment type by ID
+      parameters:
+      - description: Equipment type ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete equipment type
+      tags:
+      - Catalog
+    get:
+      description: Retrieve a single equipment type by ID
+      parameters:
+      - description: Equipment type ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get equipment type
+      tags:
+      - Catalog
+    put:
+      consumes:
+      - application/json
+      description: Update an existing equipment type
+      parameters:
+      - description: Equipment type ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated equipment type data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateEquipmentTypeRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update equipment type
+      tags:
+      - Catalog
+  /api/v1/clients:
+    get:
+      description: Retrieve a paginated list of clients with optional search
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: per_page
+        type: integer
+      - description: Search term
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List clients
+      tags:
+      - Clients
+    post:
+      consumes:
+      - application/json
+      description: Register a new client
+      parameters:
+      - description: Client data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateClientRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create client
+      tags:
+      - Clients
+  /api/v1/clients/{id}:
+    delete:
+      description: Delete a client by ID
+      parameters:
+      - description: Client ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete client
+      tags:
+      - Clients
+    get:
+      description: Retrieve a single client by their ID
+      parameters:
+      - description: Client ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get client by ID
+      tags:
+      - Clients
+    put:
+      consumes:
+      - application/json
+      description: Update an existing client's data
+      parameters:
+      - description: Client ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated client data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateClientRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update client
+      tags:
+      - Clients
+  /api/v1/equipment:
+    get:
+      description: Retrieve a paginated list of equipment with optional filters
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: per_page
+        type: integer
+      - description: Search term
+        in: query
+        name: search
+        type: string
+      - description: Filter by client ID
+        in: query
+        name: client_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List equipment
+      tags:
+      - Equipment
+    post:
+      consumes:
+      - application/json
+      description: Register new equipment for a client
+      parameters:
+      - description: Equipment data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateEquipmentRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create equipment
+      tags:
+      - Equipment
+  /api/v1/equipment/{id}:
+    delete:
+      description: Delete a piece of equipment by ID
+      parameters:
+      - description: Equipment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete equipment
+      tags:
+      - Equipment
+    get:
+      description: Retrieve a single piece of equipment by ID
+      parameters:
+      - description: Equipment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get equipment by ID
+      tags:
+      - Equipment
+    put:
+      consumes:
+      - application/json
+      description: Update an existing piece of equipment
+      parameters:
+      - description: Equipment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated equipment data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateEquipmentRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update equipment
+      tags:
+      - Equipment
+  /api/v1/health:
+    get:
+      description: Check if the API service is healthy and database is connected
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Health check
+      tags:
+      - Health
+  /api/v1/materials:
+    get:
+      description: Retrieve a paginated list of materials
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: per_page
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List materials
+      tags:
+      - Materials
+    post:
+      consumes:
+      - application/json
+      description: Create a new material in the inventory catalog
+      parameters:
+      - description: Material data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateMaterialRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create material
+      tags:
+      - Materials
+  /api/v1/materials/{id}:
+    delete:
+      description: Delete a material by ID
+      parameters:
+      - description: Material ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete material
+      tags:
+      - Materials
+    get:
+      description: Retrieve a single material by ID
+      parameters:
+      - description: Material ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get material by ID
+      tags:
+      - Materials
+    put:
+      consumes:
+      - application/json
+      description: Update an existing material
+      parameters:
+      - description: Material ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated material data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateMaterialRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update material
+      tags:
+      - Materials
+  /api/v1/users:
+    get:
+      description: Retrieve a paginated list of users (admin only)
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: per_page
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List users
+      tags:
+      - Users
+    post:
+      consumes:
+      - application/json
+      description: Create a new user (admin only)
+      parameters:
+      - description: User data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateUserRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create user
+      tags:
+      - Users
+  /api/v1/users/{id}:
+    delete:
+      description: Delete a user by ID (admin only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete user
+      tags:
+      - Users
+    get:
+      description: Retrieve a single user by their ID (admin only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get user by ID
+      tags:
+      - Users
+    put:
+      consumes:
+      - application/json
+      description: Update an existing user's data (admin only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated user data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateUserRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update user
+      tags:
+      - Users
+  /api/v1/work-orders:
+    get:
+      description: Retrieve a paginated list of work orders with optional filters
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: per_page
+        type: integer
+      - description: Filter by status
+        in: query
+        name: status
+        type: string
+      - description: Filter by priority
+        in: query
+        name: priority
+        type: string
+      - description: Filter by client ID
+        in: query
+        name: client_id
+        type: integer
+      - description: Filter by technician ID
+        in: query
+        name: technician_id
+        type: integer
+      - description: Filter by start date
+        in: query
+        name: date_from
+        type: string
+      - description: Filter by end date
+        in: query
+        name: date_to
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: List work orders
+      tags:
+      - Work Orders
+    post:
+      consumes:
+      - application/json
+      description: Create a new work order for a client's equipment
+      parameters:
+      - description: Work order data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateWorkOrderRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Create work order
+      tags:
+      - Work Orders
+  /api/v1/work-orders/{id}:
+    delete:
+      description: Delete a work order by ID
+      parameters:
+      - description: Work order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Delete work order
+      tags:
+      - Work Orders
+    get:
+      description: Retrieve a single work order by its ID
+      parameters:
+      - description: Work order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Get work order by ID
+      tags:
+      - Work Orders
+    put:
+      consumes:
+      - application/json
+      description: Update an existing work order
+      parameters:
+      - description: Work order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated work order data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateWorkOrderRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Update work order
+      tags:
+      - Work Orders
+  /api/v1/work-orders/{id}/assign:
+    post:
+      consumes:
+      - application/json
+      description: Assign a technician to a work order
+      parameters:
+      - description: Work order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Technician ID
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.AssignTechnicianRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Assign technician
+      tags:
+      - Work Orders
+  /api/v1/work-orders/{id}/materials:
+    post:
+      consumes:
+      - application/json
+      description: Add a material with quantity to a work order
+      parameters:
+      - description: Work order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Material ID and quantity
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.AddMaterialRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Add material to work order
+      tags:
+      - Work Orders
+  /api/v1/work-orders/{id}/notes:
+    post:
+      consumes:
+      - application/json
+      description: Add a note to a work order
+      parameters:
+      - description: Work order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Note text
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.AddNoteRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Add note to work order
+      tags:
+      - Work Orders
+  /api/v1/work-orders/{id}/status:
+    post:
+      consumes:
+      - application/json
+      description: Change the status of a work order
+      parameters:
+      - description: Work order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: New status
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ChangeStatusRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.APIResponse'
+      summary: Change work order status
+      tags:
+      - Work Orders
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

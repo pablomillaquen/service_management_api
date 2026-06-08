@@ -1,50 +1,281 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+  SYNC IMPACT REPORT
+  Version change: (template/unversioned) → 1.0.0
+  Modified principles: ALL — initialized from template placeholders
+    - [PRINCIPLE_1_NAME] → I. Architecture First
+    - [PRINCIPLE_2_NAME] → II. Security By Default
+    - [PRINCIPLE_3_NAME] → III. Database Ownership
+    - [PRINCIPLE_4_NAME] → IV. API Consistency
+    - [PRINCIPLE_5_NAME] → V. Testing Requirements
+  Added sections (within Core Principles):
+    - VI. Observability
+    - VII. Documentation
+    - VIII. Dependency Management
+    - IX. Performance
+    - X. Production Readiness
+  Removed sections: N/A
+  Unused template slots (omitted): SECTION_2_NAME, SECTION_2_CONTENT, SECTION_3_NAME, SECTION_3_CONTENT
+  Templates requiring updates:
+    - .specify/templates/plan-template.md — ✅ no changes needed (generic Constitution Check gate)
+    - .specify/templates/spec-template.md — ✅ no changes needed
+    - .specify/templates/tasks-template.md — ✅ no changes needed
+    - .specify/templates/checklist-template.md — ✅ no changes needed
+  Follow-up TODOs: None
+-->
+
+# Service Management API Constitution
+
+## Purpose
+
+Este repositorio define los principios obligatorios para el desarrollo del sistema Service Management API.
+
+Todas las especificaciones, planes de implementación y código generado deben cumplir esta constitución.
+
+---
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Architecture First
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+**Principle**: La arquitectura es más importante que la velocidad de desarrollo.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+**Requirements**:
+- Debe utilizarse Clean Architecture.
+- La lógica de negocio no puede depender de frameworks.
+- Los controladores HTTP no pueden contener lógica de negocio.
+- El acceso a datos debe realizarse mediante repositorios.
+- La comunicación entre capas debe utilizar DTOs.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+**Layers**:
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+Required:
+- Domain
+- Repository
+- Service
+- Handler
+- Middleware
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Forbidden:
+- Acceso directo a la base de datos desde handlers.
+- Lógica de negocio en controllers.
+- Dependencias circulares.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+---
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### II. Security By Default
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+**Principle**: Todo endpoint debe considerarse inseguro hasta ser protegido explícitamente.
+
+**Requirements**:
+
+Authentication:
+- JWT Access Token
+- Refresh Token
+
+Password Storage:
+- bcrypt
+
+Authorization:
+- Role Based Access Control (RBAC)
+
+Input Protection:
+- Request validation
+- Sanitization
+- SQL Injection prevention
+
+Infrastructure:
+- Security Headers
+- CORS
+- Rate Limiting
+- Panic Recovery
+
+Secrets:
+- Nunca almacenar credenciales en código fuente.
+- Todo valor sensible debe provenir de variables de entorno.
+
+---
+
+### III. Database Ownership
+
+**Principle**: La aplicación es responsable de la creación y mantenimiento de su esquema.
+
+**Requirements**:
+- Todas las tablas deben generarse mediante migraciones.
+- No asumir estructuras preexistentes.
+- Toda modificación de esquema requiere una nueva migración.
+- Las relaciones deben tener claves foráneas explícitas.
+- Todas las tablas deben incluir timestamps.
+
+**Required Fields**:
+- `created_at`
+- `updated_at`
+
+**Soft Delete**: `deleted_at` para entidades principales.
+
+---
+
+### IV. API Consistency
+
+**Principle**: Todas las APIs deben comportarse de forma uniforme.
+
+**Requirements**:
+- Versioning: `/api/v1`
+
+**Success Response**:
+```json
+{
+  "success": true,
+  "message": "",
+  "data": {}
+}
+```
+
+**Error Response**:
+```json
+{
+  "success": false,
+  "message": "",
+  "errors": []
+}
+```
+
+**Pagination**:
+```json
+{
+  "page": 1,
+  "per_page": 20,
+  "total": 100
+}
+```
+- Todas las listas deben soportar paginación.
+
+---
+
+### V. Testing Requirements
+
+**Principle**: El código no se considera terminado sin pruebas.
+
+**Requirements**:
+
+Minimum Coverage:
+- 80% Services
+- 80% Business Rules
+
+Required Tests:
+- Unit Tests
+- Repository Tests
+
+Optional:
+- Integration Tests
+
+Forbidden:
+- Código productivo sin pruebas de negocio.
+
+---
+
+### VI. Observability
+
+**Principle**: Toda acción importante debe poder ser auditada.
+
+**Requirements**:
+
+Logging:
+- Startup events
+- Authentication events
+- Authorization failures
+- Unexpected errors
+
+Audit Trail — registrar:
+- User
+- Action
+- Entity
+- Entity ID
+- Previous values
+- New values
+- Timestamp
+
+Audit records nunca pueden ser eliminados.
+
+---
+
+### VII. Documentation
+
+**Principle**: Toda funcionalidad debe estar documentada.
+
+**Requirements**:
+
+Generate:
+- Swagger/OpenAPI
+- README.md
+- Environment Variables Guide
+
+Each endpoint must include:
+- Description
+- Request example
+- Response example
+- Error examples
+
+---
+
+### VIII. Dependency Management
+
+**Principle**: Minimizar dependencias externas.
+
+**Requirements**:
+
+Before adding a dependency:
+1. Justify its usage.
+2. Verify active maintenance.
+3. Verify security status.
+
+Forbidden:
+- Abandoned libraries.
+- Experimental libraries in production code.
+
+---
+
+### IX. Performance
+
+**Principle**: La aplicación debe ser eficiente desde el primer despliegue.
+
+**Requirements**:
+
+Database:
+- Índices para búsquedas frecuentes.
+- Evitar N+1 queries.
+
+API:
+- Timeouts configurados.
+- Context propagation.
+
+Maximum Response Time:
+- 500 ms promedio para operaciones CRUD.
+
+---
+
+### X. Production Readiness
+
+**Principle**: Todo código generado debe poder desplegarse inmediatamente.
+
+**Requirements**:
+
+Mandatory Deliverables:
+- Dockerfile
+- docker-compose.yml
+- Swagger
+- Migrations
+- Tests
+- Seed Data
+- Environment Example
+
+The application must start successfully using `docker compose up -d` without requiring manual database creation.
+
+---
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Todas las especificaciones futuras deben cumplir esta constitución.
+Si existe conflicto entre una especificación y esta constitución, prevalece esta constitución.
+Cambios a esta constitución requieren actualización explícita de versión y aprobación documentada.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-06-07 | **Last Amended**: 2026-06-07

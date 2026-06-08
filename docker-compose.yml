@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: speckit-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: service_management
+      MYSQL_USER: speckit
+      MYSQL_PASSWORD: speckit123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: speckit-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      SERVER_PORT: "8080"
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_USER: speckit
+      DB_PASSWORD: speckit123
+      DB_NAME: service_management
+      JWT_SECRET: change-me-in-production-please
+      RATE_LIMIT_PER_MINUTE: "100"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  mysql_data:
