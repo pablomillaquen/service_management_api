@@ -8,6 +8,7 @@ import (
 	"github.com/pablomillaquen/speckit_golang_api/internal/auth"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/audit"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/client"
+	"github.com/pablomillaquen/speckit_golang_api/internal/domain/technicianlocation"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/equipment"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/material"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/user"
@@ -42,6 +43,7 @@ func NewTestDB() *gorm.DB {
 		&workorder.WorkOrderNote{},
 		&workorder.WorkOrderMaterial{},
 		&audit.AuditLog{},
+		&technicianlocation.TechnicianLocation{},
 	); err != nil {
 		panic("failed to migrate test database: " + err.Error())
 	}
@@ -80,6 +82,12 @@ func NewTestWorkOrderService(db *gorm.DB) *services.WorkOrderService {
 		repositories.NewWorkOrderNoteRepository(db),
 		repositories.NewWorkOrderMaterialRepository(db),
 		repositories.NewAuditRepository(db),
+	)
+}
+
+func NewTestTechnicianLocationService(db *gorm.DB) *services.TechnicianLocationService {
+	return services.NewTechnicianLocationService(
+		repositories.NewTechnicianLocationRepository(db),
 	)
 }
 

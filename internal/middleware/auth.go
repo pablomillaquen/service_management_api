@@ -15,12 +15,11 @@ func Auth(jwtService *auth.JWTService) gin.HandlerFunc {
 			response.Unauthorized(c, "Authorization header required")
 			return
 		}
-		parts := strings.Split(authHeader, " ")
-		if len(parts) != 2 || parts[0] != "Bearer" {
-			response.Unauthorized(c, "Invalid authorization header format")
-			return
+		tokenString := authHeader
+		if strings.HasPrefix(authHeader, "Bearer ") {
+			tokenString = strings.TrimPrefix(authHeader, "Bearer ")
 		}
-		claims, err := jwtService.ValidateToken(parts[1])
+		claims, err := jwtService.ValidateToken(tokenString)
 		if err != nil {
 			response.Unauthorized(c, "Invalid or expired token")
 			return

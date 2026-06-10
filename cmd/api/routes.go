@@ -19,6 +19,7 @@ func setupRoutes(
 	materialHandler *handlers.MaterialHandler,
 	workOrderHandler *handlers.WorkOrderHandler,
 	auditHandler *handlers.AuditHandler,
+	technicianLocationHandler *handlers.TechnicianLocationHandler,
 	rateLimiter *middleware.RateLimiter,
 ) {
 	api := r.Group("/api/v1")
@@ -113,7 +114,13 @@ func setupRoutes(
 				workOrders.POST("/:id/materials", workOrderHandler.AddMaterial)
 			}
 
-			audit := secured.Group("/audit")
+			technicianLocations := secured.Group("/technician-locations")
+		{
+			technicianLocations.POST("", rbacMiddleware("technician"), technicianLocationHandler.Create)
+			technicianLocations.GET("", rbacMiddleware("administrator", "technician"), technicianLocationHandler.FindAll)
+		}
+
+		audit := secured.Group("/audit")
 			audit.Use(rbacMiddleware("administrator"))
 			{
 				audit.GET("", auditHandler.FindAll)
