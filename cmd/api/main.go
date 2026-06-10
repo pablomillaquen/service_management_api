@@ -24,6 +24,7 @@ import (
 	"github.com/pablomillaquen/speckit_golang_api/internal/auth"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/audit"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/client"
+	"github.com/pablomillaquen/speckit_golang_api/internal/domain/technicianlocation"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/equipment"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/material"
 	"github.com/pablomillaquen/speckit_golang_api/internal/domain/user"
@@ -60,6 +61,7 @@ func main() {
 		&workorder.WorkOrderNote{},
 		&workorder.WorkOrderMaterial{},
 		&audit.AuditLog{},
+		&technicianlocation.TechnicianLocation{},
 	); err != nil {
 		logger.Error("Failed to run migrations: %v", err)
 		os.Exit(1)
@@ -80,6 +82,7 @@ func main() {
 	workOrderNoteRepo := repositories.NewWorkOrderNoteRepository(db)
 	workOrderMaterialRepo := repositories.NewWorkOrderMaterialRepository(db)
 	auditRepo := repositories.NewAuditRepository(db)
+	technicianLocationRepo := repositories.NewTechnicianLocationRepository(db)
 
 	userService := services.NewUserService(userRepo, jwtService)
 	clientService := services.NewClientService(clientRepo)
@@ -90,6 +93,7 @@ func main() {
 	materialService := services.NewMaterialService(materialRepo)
 	workOrderService := services.NewWorkOrderService(workOrderRepo, workOrderNoteRepo, workOrderMaterialRepo, auditRepo)
 	auditService := services.NewAuditService(auditRepo)
+	technicianLocationService := services.NewTechnicianLocationService(technicianLocationRepo)
 
 	healthHandler := handlers.NewHealthHandler(db)
 	authHandler := handlers.NewAuthHandler(userService)
@@ -100,6 +104,7 @@ func main() {
 	materialHandler := handlers.NewMaterialHandler(materialService)
 	workOrderHandler := handlers.NewWorkOrderHandler(workOrderService)
 	auditHandler := handlers.NewAuditHandler(auditService)
+	technicianLocationHandler := handlers.NewTechnicianLocationHandler(technicianLocationService)
 
 	authMw := middleware.Auth(jwtService)
 	rateLimiter := middleware.NewRateLimiter(cfg.RateLimit.RequestsPerMinute)
@@ -115,6 +120,7 @@ func main() {
 		healthHandler, authHandler, userHandler,
 		clientHandler, catalogHandler, equipmentHandler,
 		materialHandler, workOrderHandler, auditHandler,
+		technicianLocationHandler,
 		rateLimiter,
 	)
 
