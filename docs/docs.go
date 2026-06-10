@@ -1553,6 +1553,11 @@ const docTemplate = `{
         },
         "/api/v1/technician-locations": {
             "get": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
                 "description": "Query technician locations with optional filters. Administrators see all; technicians see only their own.",
                 "produces": [
                     "application/json"
@@ -1615,6 +1620,11 @@ const docTemplate = `{
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
                 "description": "Report current GPS location (technician only). The user_id is automatically set from the authenticated token.",
                 "consumes": [
                     "application/json"

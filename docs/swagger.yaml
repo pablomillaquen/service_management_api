@@ -1393,6 +1393,8 @@ paths:
           description: Forbidden
           schema:
             $ref: '#/definitions/response.APIResponse'
+      security:
+      - BearerAuth: []
       summary: List technician locations
       tags:
       - Technician Locations
@@ -1427,6 +1429,8 @@ paths:
           description: Forbidden
           schema:
             $ref: '#/definitions/response.APIResponse'
+      security:
+      - BearerAuth: []
       summary: Report technician location
       tags:
       - Technician Locations

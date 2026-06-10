@@ -24,6 +24,7 @@ func NewTechnicianLocationHandler(service *services.TechnicianLocationService) *
 // @Accept json
 // @Produce json
 // @Param request body dto.CreateTechnicianLocationRequest true "GPS Coordinates"
+// @Security BearerAuth
 // @Success 201 {object} response.APIResponse
 // @Failure 400 {object} response.APIResponse
 // @Failure 401 {object} response.APIResponse
@@ -58,6 +59,7 @@ func (h *TechnicianLocationHandler) Create(c *gin.Context) {
 // @Param end_date query string false "ISO 8601 end datetime filter (inclusive)"
 // @Param page query int false "Page number (default: 1)"
 // @Param per_page query int false "Items per page (default: 20)"
+// @Security BearerAuth
 // @Success 200 {object} response.APIResponse
 // @Failure 401 {object} response.APIResponse
 // @Failure 403 {object} response.APIResponse

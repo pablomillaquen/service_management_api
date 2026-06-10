@@ -10,6 +10,7 @@
 // @securityDefinitions.apikey BearerAuth
 // @in header
 // @name Authorization
+// @Security BearerAuth
 package main
 
 import (
